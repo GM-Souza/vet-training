@@ -23,7 +23,11 @@ public class Ex01AnaliseSaldoContaCorrente {
 
     public static void main(String[] args) {
 
-        double[][]mat = {{100.0,200.0,300.0,40.0},{200.0,300.0,400.0,150.0}};
+        double[][]mat =  {
+                {1000.0, 1200.5, 1100.0}, // Cliente 0
+                 {500.0, 700.0, 900.0},    // Cliente 1
+                 {2000.0, 2100.0, 2150.5} // Cliente 2
+        };
 
         for (double[] doubles : mat) {         // percorre as linhas
             for (double aDouble : doubles) {  // percorre as colunas
@@ -31,7 +35,11 @@ public class Ex01AnaliseSaldoContaCorrente {
             }
         }
 
-        System.out.println("Saldo final do cliente 1: R$ " + saldoFinal(mat, 1));
+        System.out.println();
+        for (int i = 0; i < mat.length; i++) {
+            System.out.println("Saldo final do cliente 1: R$ " + saldoFinal(mat, i));
+        }
+
 
     }
 }
