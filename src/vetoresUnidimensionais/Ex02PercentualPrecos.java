@@ -1,3 +1,11 @@
+/*
+Crie um programa que:
+Receba um vetor com os preços diários de uma ação durante 5 dias.
+
+
+Use o metodo variacaoDiaria(double[] precos), que retorne um vetor com as variações percentuais diárias.
+ */
+
 package vetoresUnidimensionais;
 
 import java.util.Arrays;
