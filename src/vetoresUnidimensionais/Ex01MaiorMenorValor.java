@@ -22,7 +22,6 @@ public class Ex01MaiorMenorValor {
         }
         return maiorPreco;
     }
-
     public static double menorPreco(double[] precos){
         double menorPreco = precos[0];
         for(double p : precos){
