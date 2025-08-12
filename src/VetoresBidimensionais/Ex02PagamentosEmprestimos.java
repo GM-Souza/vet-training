@@ -1,6 +1,5 @@
 package VetoresBidimensionais;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ex02PagamentosEmprestimos {
@@ -18,7 +17,7 @@ public class Ex02PagamentosEmprestimos {
         for (int i = 0; i < vet.length; i++) {
             System.out.println("Digite os valores da "+(i+1)+" linha: ");
             for (int j = 0; j < vet[i].length; j++) {
-
+                System.out.println("Coluna "+(j+1));
                 vet[i][j] = sc.nextDouble();
             }
         }
