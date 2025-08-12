@@ -15,7 +15,6 @@ void imprimirExtratoClientes(double[][] saldos) – exibe todos os saldos por cl
 package VetoresBidimensionais;
 
 public class Ex01AnaliseSaldoContaCorrente {
-
     public static double saldoFinal(double[][] saldos, int cliente){
         int ultimaColuna = saldos[cliente].length - 1;
         return saldos[cliente][ultimaColuna];
@@ -26,18 +25,22 @@ public class Ex01AnaliseSaldoContaCorrente {
         double[][]mat =  {
                 {1000.0, 1200.5, 1100.0}, // Cliente 0
                  {500.0, 700.0, 900.0},    // Cliente 1
-                 {2000.0, 2100.0, 2150.5} // Cliente 2
+                 {2000.0, 2100.0, 2150.5}, // Cliente 2
         };
 
-        for (double[] doubles : mat) {         // percorre as linhas
-            for (double aDouble : doubles) {  // percorre as colunas
-                System.out.print(aDouble + " ");
+        System.out.println("Saldo final do cliente 0: R$ " + saldoFinal(mat, 0));
+        System.out.println();
+
+        for(double[]linha : mat){
+            for(double coluna : linha){
+                System.out.print(coluna+" ");
             }
+            System.out.println();
         }
 
         System.out.println();
         for (int i = 0; i < mat.length; i++) {
-            System.out.println("Saldo final do cliente 1: R$ " + saldoFinal(mat, i));
+            System.out.println("Saldo final do cliente "+i+": R$ " + saldoFinal(mat, i));
         }
 
 
