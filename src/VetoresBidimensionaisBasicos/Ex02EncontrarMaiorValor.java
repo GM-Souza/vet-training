@@ -13,6 +13,7 @@ public class Ex02EncontrarMaiorValor {
         }
         return maior;
     }
+
     public static void main(String[] args) {
 
         double[][] mat = {

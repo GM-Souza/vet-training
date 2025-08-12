@@ -9,38 +9,33 @@ package VetoresBidimensionaisBasicos;
 import java.util.Scanner;
 
 public class Ex01PrenchendoMatriz2x2 {
-    public static double[] calcularSomaPorLinha(double[][] matriz) {
-        // Cria um array para armazenar a soma de cada linha.
-        double[] somaLinhas = new double[matriz.length];
+
+    public  static void preencherMatriz(double[][] matriz){
+        Scanner sc = new Scanner(System.in);
 
         for (int i = 0; i < matriz.length; i++) {
-            // Inicializa a soma da linha atual com 0.
-            double somaLinha = 0;
-
-            for (int j = 0; j < matriz[i].length; j++) {
-                // Adiciona o elemento à soma da linha atual.
-                somaLinha = somaLinha + matriz[i][j];
+            for(int j = 0; j< matriz[i].length; j++){
+                System.out.println("Linha "+i+" Coluna "+j+": ");
+                matriz[i][j]= sc.nextDouble();
             }
-            // Armazena a soma da linha atual no array de somas.
-            somaLinhas[i] = somaLinha;
         }
-        // Retorna o array contendo a soma de cada linha.
-        return somaLinhas;
     }
+    public static double calcularSomaTotal(double[][] matriz){
+        double soma = 0;
 
-    public static void main(String[] args) {
-        double[][] mat = {
-                {100, 2},
-                {120, 2},
-                {130, 2},
-        };
-
-        // Chama o metodo para calcular as somas por linha.
-        double[] saldosPorLinha = calcularSomaPorLinha(mat);
-
-        // Imprime a soma de cada linha.
-        for (int i = 0; i < saldosPorLinha.length; i++) {
-            System.out.println("Saldo da linha " + i + ": " + saldosPorLinha[i]);
+        for(int i = 0 ; i<matriz.length ; i++){
+            for (int j = 0 ; j< matriz[i].length; j++){
+                    soma+= matriz[i][j];
+            }
         }
+        return soma;
+    }
+    public static void main(String[] args) {
+
+        double[][] mat = new double[2][2];
+
+        preencherMatriz(mat);
+        System.out.println(calcularSomaTotal(mat));
+
     }
 }
