@@ -17,10 +17,9 @@ public class Ex02EncontrarMaiorValor {
     public static void main(String[] args) {
 
         double[][] mat = {
-            {100,200,300},
-            {120,700,300},
-            {100,400,500},
-            {100,700,780},
+            {100, 200, 300, 400},
+            {120, 700, 300, 100},
+            {100, 400, 500, 200},
         };
 
         System.out.println(encontrarMaiorValor(mat));

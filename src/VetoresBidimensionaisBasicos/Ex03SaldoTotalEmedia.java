@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Ex03SaldoTotalEmedia {
 
-   public static double calcularSaldoTotal(double[][] matriz){
+   public static void calcularSaldoTotal(double[][] matriz){
        double somaTotal = 0;
 
        for (int i = 0; i < matriz.length; i++) {
@@ -13,8 +13,8 @@ public class Ex03SaldoTotalEmedia {
                somaTotal += matriz[i][j];
            }
            System.out.print(somaTotal+ " ");
-       }return somaTotal;
-    }
+       }
+   }
     public static double[] calcularMediaPorCliente(double[][] matriz){
             double[] result = new double[matriz.length];
 

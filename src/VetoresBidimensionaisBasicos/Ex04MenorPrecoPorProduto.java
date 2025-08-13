@@ -9,7 +9,7 @@ public class Ex04MenorPrecoPorProduto {
 
         for (int j = 0; j < matriz[0].length; j++) {
             double menor = matriz[0][j];
-            for(int i = 1; i< matriz.length; i++){
+            for(int i = 0; i< matriz.length; i++){
                 if(matriz[i][j] < menor){
                     menor = matriz[i][j];
                 }
